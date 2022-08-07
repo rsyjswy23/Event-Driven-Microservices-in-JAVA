@@ -9,6 +9,7 @@ import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.admin.TopicListing;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.retry.RetryContext;
@@ -24,17 +25,12 @@ import java.util.stream.Collectors;
 
 @Component
 public class KafkaAdminClient {
-
     private static final Logger LOG = LoggerFactory.getLogger(KafkaAdminClient.class);
 
     private final KafkaConfigData kafkaConfigData;
-
     private final RetryConfigData retryConfigData;
-
     private final AdminClient adminClient;
-
     private final RetryTemplate retryTemplate;
-
     private final WebClient webClient;
 
 
