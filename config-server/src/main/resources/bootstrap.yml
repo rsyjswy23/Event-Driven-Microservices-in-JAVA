@@ -1,3 +1,4 @@
+
 spring:
   application:
     name: configserver
@@ -5,6 +6,7 @@ spring:
     config:
       server:
         git:
-          uri: file://Users/hui/Documents/GitHub/microservices-project/config-server-repository
-          clone-on-start: true
-    fail-fast: true
+          uri: https://github.com/rsyjswy23/microservices-app-config-repository.git
+          default-label: master
+          username: ${GIT_USERNAME}
+          password: ${GIT_PASSWORD}
