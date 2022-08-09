@@ -1,5 +1,5 @@
 package com.microservices.project.elastic.model.index;
 
-public class IndexModel {
+public interface IndexModel {
     String getId();
 }
