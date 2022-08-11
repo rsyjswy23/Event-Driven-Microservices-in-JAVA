@@ -1,9 +1,17 @@
-# Event-Driven Microservices in Java using Spring boot, Spring cloud, Kafka and Elasticsearch.
+# Tweets Data Pipeline: Event-Driven Microservices in Java using Spring boot, Spring cloud, Kafka and Elasticsearch.
 
-In this project, I first stream data from Twitter and put them on a Kafka topic. Then I create Spring Cloud Config Server as a microservice to externalize the configurations. Then I use Kafka as event store and create a microservice(twitter_to_kafka) that subscribes to a Kafka topic and consumes the data that come into Kafka in realtime. Next, I create an event-driven microservice(kafka_to_elastic) that consumes data from kafka and put on Elasticsearch to make the data searchable effectively. Lastly, I create a elastic_query_microservice to query the data from Elasticsearch. 
+
+## Process:
+- stream data from Twitter,
+- put data on kafka topic,
+- create Spring Cloud Config Server as a microservice to externalize the configurations,
+- use Kafka as event store,
+- create a twitter_to_kafka microservice that subscribes to a Kafka topic and consumes the data that come into Kafka in realtime,
+- create a kafka_to_elastic microservice that consumes data from kafka and put on Elasticsearch to make the data searchable effectively,
+- create a elastic_query_microservice to query the data from Elasticsearch
 
 This project follows the instruction of an [Udemy course by Ali Gelenler](https://www.udemy.com/course/event-driven-microservices-spring-boot-kafka-and-elasticsearch/)
-## Architecture Overview on this repo:
+## Architecture Overview of this repo:
 ![Untitled Diagram drawio](https://user-images.githubusercontent.com/101481587/184073294-42d5cda1-d3c4-45dc-b45f-6178c567ffad.svg)
 
 
